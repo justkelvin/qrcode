@@ -1,6 +1,7 @@
 # QR Code Generator
 
 ![banner](qr.png)
+#v2020.12
 
 A free and opensource tool to generate Qr Codes
 This script will help you create a QR Code of the text of your choice and print it in your terminal. It will also create a high quality image in your /home/<username> directory to help you store the image for later use.
