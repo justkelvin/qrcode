@@ -16,7 +16,7 @@ Requires python3.
 
 # Installation
 
-Requires latest version ofPython3 installed and several pip modules.
+Requires latest version of Python3 installed and several pip modules.
 - colorama
 - pyqrcode
 
