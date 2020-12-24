@@ -22,12 +22,12 @@ Requires latest version ofPython3 installed and several pip modules.
 
 ## For Debian-based GNU/Linux distributions
 
-`sudo apt install git   
-git clone https://github.com/n07f0und/qrcode.git   
-cd qrcode   
-pip3 install colorama   
-pip3 install pyqrcode   
-python3 qr.py`  
+`sudo apt install git<br>
+git clone https://github.com/n07f0und/qrcode.git<br>
+cd qrcode<br>
+pip3 install colorama<br>
+pip3 install pyqrcode<br>
+python3 qr.py<br>`  
 
 # Contact me
 For Queries:[Twitter](https://twitter.com/Muinde_Kevoh)
