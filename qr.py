@@ -22,7 +22,7 @@ def generate_qr():
 	y = os.system("	figlet -w 1000 QR Code | lolcat")
 	prGreen("			v2020.12")
 	prCyan("	Script by 3rr0r 404")
-	prPurple("	GitHub:https://github.com/3rror404/qrcode.git")
+	prPurple("	GitHub: https://github.com/n07f0und/qrcode.git")
 	print("	")
 	prLightGray("	------------------ Qr Code ------------------")
 	print(" ")
