@@ -41,8 +41,6 @@ if __name__ == '__main__':
 
 #Created url.png image management
 
-#os.system("rm url.png")
-
 print(" ")
 u = input("Do you want to save QR created image file?(Y/N): ")
 
