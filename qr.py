@@ -20,7 +20,7 @@ def prBlack(skk): print("\033[98m {}\033[00m" .format(skk))
 
 def generate_qr():
 	y = os.system("	figlet -w 1000 QR Code | lolcat")
-	prGreen("			v2020.12")
+	prGreen("			v2021.1")
 	prCyan("	Script by 3rr0r 404")
 	prPurple("	GitHub: https://github.com/n07f0und/qrcode.git")
 	print("	")
