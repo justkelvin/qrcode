@@ -26,7 +26,7 @@ def generate_qr():
 	print("	")
 	prLightGray("	------------------ Qr Code ------------------")
 	print(" ")
-	value = input(Fore.RED + "Enter your text: " + Style.RESET_ALL)
+	value = input(Fore.RED + "Enter text: " + Style.RESET_ALL)
 	text = value
 	url = pyqrcode.create(text)
 	url.png('url.png', scale=10)
