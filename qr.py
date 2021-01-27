@@ -28,12 +28,12 @@ def generate_qr():
 	print(" ")
 	
 ################################File reading capability##############################
-#	path = input("Enter your file path: ")
-#	#path = "C:/Users/HP/Downloads/text.txt"
-#
-#	fileObject = open(path, "r")
-#	data = fileObject.read()
-#	print(data)
+	path = input("Enter your file path: ")
+	#path = "C:/Users/HP/Downloads/text.txt"
+
+	fileObject = open(path, "r")
+	data = fileObject.read()
+	print(data)
 #######################################################################################
 
 	value = input(Fore.RED + "Enter text: " + Style.RESET_ALL)
