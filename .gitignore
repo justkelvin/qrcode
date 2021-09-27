@@ -1,3 +1,6 @@
 .vscode
 __pycache__
 qr_images
+.gitgnore
+not.py
+test.py
