@@ -24,6 +24,9 @@ def main():
         print(Fore.RED + exit_text)
     except Exception:
         traceback.print_exc(file=sys.stdout)
+    except ModuleNotFoundError:
+        print(Fore.RED + '[!] You have missing dependancies...')
+        print(Fore.RED + '[-] Try ' + Fore.GREEN + 'pip3 install -r requirements.txt')
     sys.exit(0)
     
 if __name__ == '__main__':
