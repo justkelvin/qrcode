@@ -9,6 +9,7 @@ try:
 except ModuleNotFoundError:
     print('[!] You have missing dependancies...')
     print('[-] Try pip3 install -r requirements.txt')
+    sys.exit(0)
 
 def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
