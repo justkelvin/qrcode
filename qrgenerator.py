@@ -7,8 +7,8 @@ try:
     from colorama import Fore, Style
     from banner import banner
 except ModuleNotFoundError:
-    print(Fore.RED + '[!] You have missing dependancies...')
-    print(Fore.RED + '[-] Try ' + Fore.GREEN + 'pip3 install -r requirements.txt')    
+    print('[!] You have missing dependancies...')
+    print('[-] Try pip3 install -r requirements.txt')
 
 def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
