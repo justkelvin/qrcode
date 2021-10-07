@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 
-try:
-    import pyqrcode
-    import argparse
-    import traceback, sys
-    from colorama import Fore, Style
-    from banner import banner
-except ModuleNotFoundError:
-    print('[!] You have missing dependancies...')
-    print('[-] Try pip3 install -r requirements.txt')
-    sys.exit(0)
+import pyqrcode
+import argparse
+import traceback, sys
+from colorama import Fore, Style
+from banner import banner
 
 def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
