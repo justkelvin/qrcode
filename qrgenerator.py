@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
+from os import error
 import pyqrcode
 import argparse
-import traceback, sys
+import traceback, sys, os
 from colorama import Fore, Style
 from banner import banner
 
@@ -11,6 +12,7 @@ def generate_qr(raw_text='', file_name=''):
     qr_code = pyqrcode.create(raw_text)
     print(qr_code.terminal())
     qr_code.png(f'qr_images/{file_name}.png', scale=10)
+    print(Fore.GREEN + "\nYour image has been saved at " + Fore.CYAN + f"qr_images/{file_name}.png")
 
 def main():
     parser = argparse.ArgumentParser(description='Creates a qrcode and a png file of the qrcode')
@@ -25,11 +27,17 @@ def main():
             print(banner())
             generate_qr(raw_text, file_name)
 
-        elif args.input or args.output:
+        elif args.input:
             raw_text = args.input
             file_name = args.input
             print(banner())
             generate_qr(raw_text, file_name)
+        
+        elif args.output:
+            err_msg = "Input string is required!"
+            print(Fore.RED + err_msg + Fore.RESET + banner())
+            os.system("./qrgenerator.py -h")
+            sys.exit(1)
 
         else:
             print(banner())
