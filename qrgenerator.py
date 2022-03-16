@@ -9,7 +9,9 @@ try:
     import pyqrcode
     from colorama import Fore, Style
 except ModuleNotFoundError:
-    print("Install missing modules, check README.md for instructions")
+    print(banner())
+    print("Install missing modules, check README.md for instructions\n")
+    exit(1)
 
 def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
