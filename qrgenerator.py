@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
 from os import error
-import pyqrcode
 import argparse
 import traceback, sys, os
-from colorama import Fore, Style
 from banner import banner
 from datetime import datetime
+try:
+    import pyqrcode
+    from colorama import Fore, Style
+except ModuleNotFoundError:
+    print("Install missing modules, check README.md for instructions")
 
 def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
