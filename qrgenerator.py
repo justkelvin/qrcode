@@ -23,33 +23,31 @@ def generate_qr(raw_text='', file_name=''):
 def main():
     parser = argparse.ArgumentParser(description='Creates a qrcode and a png file of the qrcode')
     parser.add_argument('-i', '--input', help='Your input text string to be converted')
-    # parser.add_argument('-o', '--output', help='Custom output png file.')
+    parser.add_argument('-o', '--output', help='Custom output png file.')
     args = parser.parse_args()
 
     try:
         if args.input:
             raw_text = args.input
-            # file_name = args.output
             file_name = datetime.now().isoformat()
             print(banner())
             generate_qr(raw_text, file_name)
-
-        # elif args.input:
-        #     raw_text = args.input
-        #     file_name = args.input
-        #     print(banner())
-        #     generate_qr(raw_text, file_name)
         
         elif args.output:
             err_msg = "Input string is required!"
             print(Fore.RED + err_msg + Fore.RESET + banner())
             os.system("./qrgenerator.py -h")
             sys.exit(1)
+        
+        elif args.input and args.output:
+            raw_text = args.input
+            file_name = args.output
+            print(banner())
+            generate_qr(raw_text, file_name)
 
         else:
             print(banner())
             raw_text = input(Fore.BLUE + '[>] Enter text to convert: ' + Style.RESET_ALL)
-            # file_name = raw_text
             file_name = datetime().isoformat()
             generate_qr(raw_text, file_name)
 
