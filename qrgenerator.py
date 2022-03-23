@@ -20,6 +20,15 @@ def generate_qr(raw_text='', file_name=''):
     qr_code.png(f'qrcodes/{file_name}.png', scale=10)
     print(Fore.GREEN + "\nYour image has been saved at " + Fore.CYAN + f"qrcodes/{file_name}.png")
 
+def path_chk():
+    path = "qrcodes"
+    if not os.path.exists(path):
+        print("Creating your images directory...")
+        os.mkdir(path)
+    # else:
+    #     print("[-] Check if image directory exist...")
+    #     print("[+] Exists... Ready to work")
+        
 def main():
     parser = argparse.ArgumentParser(description='Creates a qrcode and a png file of the qrcode')
     parser.add_argument('-i', '--input', help='Your input text string to be converted')
@@ -61,4 +70,5 @@ def main():
     sys.exit(0)
 
 if __name__ == '__main__':
+    path_chk()
     main()
