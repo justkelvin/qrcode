@@ -54,10 +54,6 @@ def main():
     except KeyboardInterrupt:
         exit_text = '\n\n[!] Closing... Goodbye. (^-^)\n'
         print(Fore.RED + exit_text)
-        
-    except ModuleNotFoundError:
-        exit_text = '\n\n[!] Install missing modules and try again.\n'
-        print(Fore.RED + exit_text)
 
     except Exception:
         traceback.print_exc(file=sys.stdout)
