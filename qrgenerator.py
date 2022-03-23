@@ -48,7 +48,7 @@ def main():
         else:
             print(banner())
             raw_text = input(Fore.BLUE + '[>] Enter text to convert: ' + Style.RESET_ALL)
-            file_name = datetime().isoformat()
+            file_name = datetime.now().isoformat()
             generate_qr(raw_text, file_name)
 
     except KeyboardInterrupt:
