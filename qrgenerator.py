@@ -17,8 +17,8 @@ def generate_qr(raw_text='', file_name=''):
     """Use pyqrcode to convert text and generate a qrcode"""
     qr_code = pyqrcode.create(raw_text)
     print(qr_code.terminal())
-    qr_code.png(f'qr_images/{file_name}.png', scale=10)
-    print(Fore.GREEN + "\nYour image has been saved at " + Fore.CYAN + f"qr_images/{file_name}.png")
+    qr_code.png(f'qrcodes/{file_name}.png', scale=10)
+    print(Fore.GREEN + "\nYour image has been saved at " + Fore.CYAN + f"qrcodes/{file_name}.png")
 
 def main():
     parser = argparse.ArgumentParser(description='Creates a qrcode and a png file of the qrcode')
