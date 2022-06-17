@@ -23,11 +23,10 @@ def generate_qr(raw_text='', file_name=''):
 def path_chk():
     path = "qrcodes"
     if not os.path.exists(path):
+        print("[-] Check if image directory exist...")
+        print("[!] False")
         print("Creating your images directory...")
         os.mkdir(path)
-    # else:
-    #     print("[-] Check if image directory exist...")
-    #     print("[+] Exists... Ready to work")
         
 def main():
     parser = argparse.ArgumentParser(description='Creates a qrcode and a png file of the qrcode')
