@@ -20,6 +20,10 @@ def generate_qr(raw_text='', file_name=''):
     qr_code.png(f'qrcodes/{file_name}.png', scale=10)
     print(Fore.GREEN + "\nYour image has been saved at " + Fore.CYAN + f"qrcodes/{file_name}.png")
 
+def read_qr():
+    """Read a qrcode image and determine its content"""
+    pass
+
 def path_chk():
     path = "qrcodes"
     if not os.path.exists(path):
