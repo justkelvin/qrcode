@@ -7,6 +7,8 @@ from banner import banner
 from datetime import datetime
 try:
     import pyqrcode
+    from pyzbar.pyzbar import decode
+    from PIL import Image
     from colorama import Fore, Style
 except ModuleNotFoundError:
     print(banner())
@@ -22,7 +24,10 @@ def generate_qr(raw_text='', file_name=''):
 
 def read_qr():
     """Read a qrcode image and determine its content"""
-    pass
+    img = Image.open()
+    qr_data = decode(img)
+    print(Fore.GREEN + "[-] Scanning...\n")
+    print(Fore.WHITE + "[»] " + qr_data)
 
 def path_chk():
     path = "qrcodes"
