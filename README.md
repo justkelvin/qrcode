@@ -4,7 +4,7 @@
 
 ## **A free and opensource tool to generate QR Codes**
 
-This script will help you create a QR Code of the text of your choice and print it in your terminal. It will also create a high quality image in a directory to help you store the image for later use.
+This script will help you create a QR Code of the text of your choice and print it in your terminal. It will also create a high quality image in a directory to help you store the image for later use. The script now supports qr image decoding.
 
 ## **Compactibility**
 
@@ -18,8 +18,8 @@ Requires latest version of Python3 installed and several pip modules.
 ### **For Debian-based GNU/Linux distributions**
 
 ```linux
-sudo apt install git python3
-git clone https://github.com/n07f0und/qrcode.git
+sudo apt install git python3 zbar
+git clone https://github.com/justkelvin/qrcode.git
 cd qrcode
 pip3 install -r requirements.txt
 ./qrgenerator.py
@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 Ensure you have git and python3 installed and can run ```git --version``` and ```python3 -V``` in a commandline prompt
 
 ```windows
-git clone https://github.com/n07f0und/qrcode.git
+git clone https://github.com/justkelvin/qrcode.git
 cd qrcode
 pip3 install -r requirements.txt
 python3 qrgenerator.py
@@ -56,10 +56,14 @@ The script can be run  with the following options.
 
 ./qrgenerator -i <input string> -o <output image file name>
 
+# To decode a qr image file
+
+./qrgenerator -d <image location>
+
 ```
 
 ![prompt](qr_images/output.png)
 
 ## **Contact me**
 
-For Queries: [Twitter](https://twitter.com/@_K3voh)
+For Queries: [Twitter](https://twitter.com/@alias_notfound)
