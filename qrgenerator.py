@@ -27,11 +27,9 @@ def generate_qr(raw_text='', file_name=''):
 
 def read_qr(file_name):
     """Read a qrcode image and determine its content"""
-    img = Image.open(file_name)
-    qr_data = decode(img)
+    qr_data = decode(Image.open(file_name))
     qr_data = qr_data[0].data.decode("utf-8")
     print(Fore.GREEN + "[-] Scanning... Decoded.")
-    # print(Fore.WHITE + "[] " + qr_data)
     print(f"{Fore.GREEN}[+] {Fore.WHITE}{qr_data}")
 
 def path_chk():
