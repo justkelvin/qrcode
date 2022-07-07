@@ -30,9 +30,9 @@ def read_qr(file_name):
     img = Image.open(file_name)
     qr_data = decode(img)
     qr_data = qr_data[0].data.decode("utf-8")
-    # print(Fore.GREEN + "[-] Scanning...\n")
-    # print(Fore.WHITE + "[»] " + qr_data)
-    print(qr_data)
+    print(Fore.GREEN + "[-] Scanning... Decoded.")
+    # print(Fore.WHITE + "[] " + qr_data)
+    print(f"{Fore.GREEN}[+] {Fore.WHITE}{qr_data}")
 
 def path_chk():
     path = "qrcodes"
