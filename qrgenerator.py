@@ -29,6 +29,7 @@ def read_qr(file_name):
     """Read a qrcode image and determine its content"""
     img = Image.open(file_name)
     qr_data = decode(img)
+    qr_data = qr_data[0].data.decode("utf-8")
     # print(Fore.GREEN + "[-] Scanning...\n")
     # print(Fore.WHITE + "[»] " + qr_data)
     print(qr_data)
