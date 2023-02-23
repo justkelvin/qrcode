@@ -66,4 +66,4 @@ The script can be run  with the following options.
 
 ## **Contact me**
 
-For Queries: [Twitter](https://twitter.com/@alias_notfound)
+For Queries: [Twitter](https://twitter.com/alias_notfound)
